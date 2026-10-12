@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Rock Paper Scissors</title>
+</head>
+<body>
+    <h1>Rock Paper Scissors</h1>
+    <div id="menu">
+        <button onclick="createRoom()">Create Lobby</button>
+        <br><br>
+        <input type="text" id="roomCodeInput" placeholder="Enter Code">
+        <button onclick="joinRoom()">Join Lobby</button>
+    </div>
+    
+    <div id="game" style="display:none;">
+        <h2 id="status">Waiting...</h2>
+        <h3 id="roomDisplay"></h3>
+        <button onclick="play('Rock')">Rock</button>
+        <button onclick="play('Paper')">Paper</button>
+        <button onclick="play('Scissors')">Scissors</button>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="client.js"></script>
+</body>
+</html>
